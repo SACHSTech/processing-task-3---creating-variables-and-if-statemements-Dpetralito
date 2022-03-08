@@ -15,6 +15,13 @@ public class Sketch extends PApplet {
    * Called once at the beginning of execution.  Add initial set up
    * values here i.e background, stroke, fill etc.
    */
+
+    int hour = hour();
+    int minute = minute();
+    int second = second();
+
+    int realHour = (int)(hour + 7);
+  
     float circleX = random(0, 500);
     float circleY = random(0, 500);
     float circleDiameter = random(0, 500);
@@ -112,9 +119,10 @@ public class Sketch extends PApplet {
 
     size(500, 500);
     textSize(32);
-    text("The time is 5:55 p.m", 40, 120); 
+    text ("the time is : " + realHour + ":" + minute + ":" + second, 1, 100); 
     fill(0, 0, 0);
 
+    
     
     
   }
